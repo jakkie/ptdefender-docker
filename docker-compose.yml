@@ -1,0 +1,14 @@
+
+version: '3'
+
+services:
+  ptdefender:
+    build: .
+    container_name: ptdefender
+    volumes:
+      - <your path>/application.properties:/home/headless/ProfitTrailer/application.properties
+    restart: always
+    ports:
+      - "5901:5901"
+      - "6901:6901"
+
